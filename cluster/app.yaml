@@ -27,7 +27,7 @@ spec:
     name: flux-system
   path: ./base/terraform
   prune: true
-  validation: client
+  # validation: client
 # ---
 # apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 # kind: Kustomization
