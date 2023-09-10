@@ -1,0 +1,15 @@
+---
+apiVersion: infra.contrib.fluxcd.io/v1alpha1
+kind: Terraform
+metadata:
+  name: k8s-vault-terraform
+  namespace: flux-system
+spec:
+  interval: 1m
+  approvePlan: auto
+  destroyResourcesOnDeletion: true
+  enableInventory: true
+  path: ./base/terraform/k8s-vault-terraform
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
